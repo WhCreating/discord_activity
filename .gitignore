@@ -3,3 +3,7 @@
 */*.png
 ./*.ico
 ./*.png
+build
+*.ico
+*.png
+*.spec
