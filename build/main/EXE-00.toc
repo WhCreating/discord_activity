@@ -218,7 +218,7 @@
  [],
  False,
  False,
- 1779914491,
+ 1779914857,
  [('run.exe',
    'C:\\Users\\pavel\\projects\\discord_activity\\.venv\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')],
