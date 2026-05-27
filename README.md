@@ -11,3 +11,4 @@ Customize your Discord activity artificially
 ## Где взять key api от freeimage.host?
 1. Заходим на https://freeimage.host/api
 2. Копируем "Ключ API"
+3. Готово
