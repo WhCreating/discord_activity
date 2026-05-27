@@ -1,5 +1,5 @@
 */__pycache__
-build/main
+build/main/*
 build/main.exe
 m.ico
 m.png
