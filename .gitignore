@@ -1,9 +1,6 @@
 */__pycache__
-*/*.ico
-*/*.png
-./*.ico
-./*.png
-./build/*
+build/main
+build/main.exe
 m.ico
 m.png
 main.spec
