@@ -1,6 +1,7 @@
 */__pycache__
 build/main/*
 build/main.exe
+build/*.rar
 m.ico
 m.png
 main.spec
