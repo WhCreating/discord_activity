@@ -1,5 +1,7 @@
-# discord_activity
-Customize your Discord activity artificially
+# Discord Activity v1.0.2
+В вашей активности дискорда будет отображаться любой открытое вами приложение, кроме самого дискорда и проводника.
+
+![Пример](img.png)
 
 ## Где взять id приложения дискорд?
 1. Заходим на [Discord Developer Portal](https://discord.com/developers/applications)
