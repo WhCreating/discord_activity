@@ -45,10 +45,17 @@ class ActivityDS:
         
         icon_url = self.get_icon_process(process.exe())
 
-        if process.name().replace(".exe", "") != "explorer":
-            await self.RPC.update(name=process.name().replace(".exe", ""), large_image=icon_url)
+        if process.name().replace(".exe", "") == "Discord":
+            pass
         else :
+            await self.RPC.update(name=process.name().replace(".exe", ""), large_image=icon_url)
+
+        if process.name().replace(".exe", "") == "explorer":
             await self.RPC.clear()
+
+        
+
+            
 
     def get_icon_process(self, path) -> str:
         try:
