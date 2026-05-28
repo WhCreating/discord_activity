@@ -28,8 +28,6 @@ class MonitoringWindow:
             if hwnd:
                 await callback(hwnd)
 
-
-
 class ActivityDS:
     def __init__(self, id_app: int, key_img: str):
         self.RPC = AioPresence(id_app)
@@ -40,22 +38,23 @@ class ActivityDS:
 
     async def activity_process(self, hwnd):
 
-        _, pid = win32process.GetWindowThreadProcessId(hwnd)
-        process = psutil.Process(pid)
-        
-        icon_url = self.get_icon_process(process.exe())
+        try :
 
-        if process.name().replace(".exe", "") == "Discord":
-            pass
-        else :
-            await self.RPC.update(name=process.name().replace(".exe", ""), large_image=icon_url)
-
-        if process.name().replace(".exe", "") == "explorer":
-            await self.RPC.clear()
-
-        
-
+            _, pid = win32process.GetWindowThreadProcessId(hwnd)
+            process = psutil.Process(pid)
             
+            icon_url = self.get_icon_process(process.exe())
+
+            if process.name().replace(".exe", "") == "Discord":
+                pass
+            else :
+                if not icon_url is None:
+                    await self.RPC.update(name=process.name().replace(".exe", ""), large_image=icon_url)
+
+            if process.name().replace(".exe", "") == "explorer":
+                await self.RPC.clear()   
+        except Exception as e:
+            print(f"Произошла ошибка при установке активности: {e}")
 
     def get_icon_process(self, path) -> str:
         try:

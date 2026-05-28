@@ -21,5 +21,5 @@ async def main():
     await monitoring.monitoring_window(call)
 
 if __name__ == "__main__":
-    print("Support the developer with a donation: https://www.donationalerts.com/r/looooz")
+    print("Support the developer with a donation: https://www.donationalerts.com/r/looooz\n")
     asyncio.run(main())
